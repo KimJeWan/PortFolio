@@ -1,0 +1,81 @@
+import React, { useEffect, useState } from "react";
+import { IoIosCloud ,IoIosSunny, IoIosRainy } from "react-icons/io";
+
+const Header_introduce = ( {Props} ) => {
+
+    const [cityKorean, setCityKorean] = useState('대구')
+    const now = new Date()
+
+    const hours = String(now.getHours()).padStart(2,"0")
+    const minutes = String(now.getMinutes()).padStart(2,"0")
+    const Sconds = String(now.getSeconds()).padStart(2,"0")
+
+   const nowTime = (`( ${hours} : ${minutes} : ${Sconds} )`)
+   const changeCity = ( city ) => {
+    Props.cityWeather.setCity(city)
+    }
+
+    useEffect(()=> {
+        if(Props.cityWeather.city=='seoul')
+        setCityKorean('서울')
+        else if(Props.cityWeather.city=='daejeon')
+        setCityKorean('대전')
+        else if(Props.cityWeather.city=='daegu')
+        setCityKorean('대구')
+        else if(Props.cityWeather.city=='busan')
+        setCityKorean('부산')
+        else if(Props.cityWeather.city=='jeju')
+        setCityKorean('제주')
+    },[Props])
+
+    const weatherDivision = () => {
+        if(Props.cityWeather.weather=='Clouds')
+        return (
+        <>
+            <IoIosCloud />  ( 구름 )
+        </>)
+        else if(Props.cityWeather.weather=='Clear')
+        return (
+        <>
+            <IoIosSunny />  ( 맑음 )
+        </>)
+         else if(Props.cityWeather.weather=='Rain')
+         return (
+         <>
+             <IoIosRainy />  ( 비 )
+         </>)
+    }
+
+
+    return (
+        <div className="introduce">
+            <img src="/img/jewan2.jpg" className="Propile" />
+            <h1 className="introduce_text">김제완</h1>
+            <h3 className="introduce_text">FrontEnd Developer</h3>
+            <img onClick={()=> window.location.href='https://github.com/KimJeWan'} className="introduce_img" src="/img/GH.png"></img>
+            <img onClick={()=> window.location.href='https://blog.naver.com/wpdhksdl04'} className="introduce_img" src="/img/naverBlog.png"></img>
+            <img onClick={()=> window.location.href='https://www.instagram.com/jewangim/'} className="introduce_img" src="/img/instar.png"></img>
+            <div><br/>
+                <div className="weather_box">
+                    {Props.weather == 'err' ? '날씨정보 받아오지 못함' : 
+                        <>
+                            현재 <span className="time_text">{nowTime}</span>
+                            <br/><span className="city_text">{cityKorean}</span> 날씨 <br/><br/>
+                            {weatherDivision()}<br/>
+                            기온 : {Props.cityWeather.temperature} ℃<br/>
+                            습도 : {Props.cityWeather.humidity} %<br/>
+                            초속 : {Props.cityWeather.wind} m/s<br/>
+                            <span className="another_city_search_text">↓↓↓↓다른도시 검색하기↓↓↓↓</span><br/>
+                            <button onClick={()=>changeCity('seoul')}>서울</button>
+                            <button onClick={()=>changeCity('daejeon')}>대전</button>
+                            <button onClick={()=>changeCity('daegu')}>대구</button>
+                            <button onClick={()=>changeCity('busan')}>부산</button>
+                            <button onClick={()=>changeCity('jeju')}>제주</button><br/><br/>
+                        </>} 
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Header_introduce;

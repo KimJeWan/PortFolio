@@ -1,0 +1,41 @@
+.Introduce_main{
+    background: rgb(250, 237, 213);
+    border: 1px solid gray;
+    width: 100%;
+    padding : 10px;
+    border : 1px solid gray;
+    border-radius: 30px;
+    display: flex;
+}
+
+.Introduce_header{
+    width: 41%;
+    padding: 20px;
+    /* background: red; */
+    /* border-right: 1px solid black; */
+}
+
+.Introduce_body{
+    width: 39%;
+    padding: 20px;
+    /* background: blue; */
+    /* border-right: 1px solid black; */
+}
+
+.Introduce_footer{
+    width: 20%;
+    padding: 20px;
+    /* background: green; */
+    /* border-right: 1px solid black; */
+}
+
+.education_ul li {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.experience_ul li{
+    font-weight: 700;
+    font-size: 18px;
+}
+
