@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.5d8e78a1.css",
-    "main.js": "/PortFolio/static/js/main.fa87bfb5.js",
+    "main.css": "/PortFolio/static/css/main.3238f6d1.css",
+    "main.js": "/PortFolio/static/js/main.f6ae6308.js",
     "static/media/NanumBarunGothicLight.ttf": "/PortFolio/static/media/NanumBarunGothicLight.644909786861639c2cf6.ttf",
     "static/media/NanumBarunGothicUltraLight.ttf": "/PortFolio/static/media/NanumBarunGothicUltraLight.48f4f8e417bc6c695e72.ttf",
     "static/media/NanumBarunGothicBold.ttf": "/PortFolio/static/media/NanumBarunGothicBold.d2409cf29861098bad74.ttf",
@@ -10,11 +10,11 @@
     "static/media/NanumBarunGothicBold.otf": "/PortFolio/static/media/NanumBarunGothicBold.8bf8d866c5b5e1b1d6df.otf",
     "static/media/NanumBarunGothic.otf": "/PortFolio/static/media/NanumBarunGothic.e511eb615f740b16240d.otf",
     "index.html": "/PortFolio/index.html",
-    "main.5d8e78a1.css.map": "/PortFolio/static/css/main.5d8e78a1.css.map",
-    "main.fa87bfb5.js.map": "/PortFolio/static/js/main.fa87bfb5.js.map"
+    "main.3238f6d1.css.map": "/PortFolio/static/css/main.3238f6d1.css.map",
+    "main.f6ae6308.js.map": "/PortFolio/static/js/main.f6ae6308.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d8e78a1.css",
-    "static/js/main.fa87bfb5.js"
+    "static/css/main.3238f6d1.css",
+    "static/js/main.f6ae6308.js"
   ]
 }
