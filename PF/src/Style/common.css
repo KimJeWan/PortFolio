@@ -1,133 +1,167 @@
 /* 폰트 - 고딕체 */
 @font-face {
-    font-family: 'NanumBarunGothic';
-    font-weight: 100;
-    src: url('/public/fonts/NanumBarunGothic.otf') format('opentype'),
-        url('/public/fonts/NanumBarunGothicUltraLight.ttf') format('truetype');
-  }
+  font-family: "NanumBarunGothic";
+  font-weight: 100;
+  src: url("/public/fonts/NanumBarunGothic.otf") format("opentype"),
+    url("/public/fonts/NanumBarunGothicUltraLight.ttf") format("truetype");
+}
 @font-face {
-    font-family: 'NanumBarunGothic';
-    font-weight: 200;
-    src: url('/public/fonts/NanumBarunGothicLight.otf') format('opentype'),
-        url('/public/fonts/NanumBarunGothicLight.ttf') format('truetype');
-  }
-  
-  @font-face {
-    font-family: 'NanumBarunGothic';
-    font-weight: 400;
-    src: url('/public/fonts/NanumBarunGothic.otf') format('opentype'),
-        url('/public/fonts/NanumBarunGothic.ttf') format('truetype');
-  }
-  
-  @font-face {
-    font-family: 'NanumBarunGothic';
-    font-weight: 600;
-    src: url('/public/fonts/NanumBarunGothicBold.otf') format('opentype'),
-        url('/public/fonts/NanumBarunGothicBold.ttf') format('truetype');
-  }
+  font-family: "NanumBarunGothic";
+  font-weight: 200;
+  src: url("/public/fonts/NanumBarunGothicLight.otf") format("opentype"),
+    url("/public/fonts/NanumBarunGothicLight.ttf") format("truetype");
+}
 
-*{
-    font-family: 'NanumBarunGothic';
-} 
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-weight: 400;
+  src: url("/public/fonts/NanumBarunGothic.otf") format("opentype"),
+    url("/public/fonts/NanumBarunGothic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-weight: 600;
+  src: url("/public/fonts/NanumBarunGothicBold.otf") format("opentype"),
+    url("/public/fonts/NanumBarunGothicBold.ttf") format("truetype");
+}
+
+/*  페이지 전체 글꼴 설정 ( 고딕 ) */
+* {
+  font-family: "NanumBarunGothic";
+}
+
+/* 페이지 전체 a 테그 방문 후 글꼴 설정 ( 보라색 x , 밑줄 x ) */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.none {
+  display: none;
+}
 
 .center {
-    text-align: center;
-} 
-
-.testbg{
-    background: red;
+  text-align: center;
 }
 
-/* 불특정 */
-
-.container { 
-    display: flex;
-    height: 100%;
-    margin: 30px;
-    padding: 30px;
-    border: 1px solid black;
-    border-radius: 30px;
-    min-height: 800px;
-    background: hsl(63, 84%, 71%);
+.pointer:hover {
+  cursor: pointer;
 }
 
-.introduce_text {
-    color: white;
+/* 메인 배경 ( public/index.html - body calss ) */
+.MainBG {
+  background-image: url("./../../public/img/pst.jpg");
+  background-size: 120%;
 }
 
-.introduce_img {
-    width: 30px;
-    height: 30px;
-    margin: 10px;
+/* 공동으로 사용하는 css */
+
+/* 최상단 레이아웃 */
+.container {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 85%;
+  height: 800px;
 }
 
-.introduce_img:hover {
-    cursor: pointer;
-}
-
+/* 최상단 하위 레이아웃 */
 .content {
-    border: 1px solid black;
-    background-color: aqua;
-    width: 90%;
-    padding-left: 20px;
-    border-radius: 30px;
-    display: flex;
+  border: 1px solid black;
+  background-color: rgb(127, 243, 247);
+  width: 90%;
+  padding-left: 20px;
+  border-radius: 30px;
+  display: flex;
 }
 
-.introduce{
-    margin-right: 30px;
-    border-radius: 30px;
-    width: 350px;
-    padding : 30px 10px 10px 10px;
-    text-align: center;
-    /* background: red; */
+/* 왼쪽 레이아웃 ( 헤더 - 간단소개, 날씨 ..) */
+.introduce {
+  margin-right: 30px;
+  border-radius: 30px;
+  width: 350px;
+  padding: 30px 10px 10px 10px;
+  text-align: center;
+  /* background: red; */
 }
 
-.main{
-    background: rgb(250, 237, 213);
+/* 헤더 본인사진 */
+.Propile {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+/*  사이드 네비게이션 바 간격 조절 */
+.sideMenu {
+  margin-left: 20px;
+}
+
+/* 날씨 표시 공간 */
+.weather_box {
+  font-size: 20px;
+  /* border: 1px solid black; */
+}
+
+/* 다른 도시 검색 표시 텍스트 */
+.another_city_search_text {
+  font-size: 12px;
+}
+
+/* 다른 도시 검색 버튼 */
+.weather_box button {
+  margin-right: 3px;
+  border-radius: 30%;
+  border: 1px solid white;
+}
+
+/* 현재 시간 텍스트 */
+.time_text {
+  font-size: 12px;
+}
+
+/* sns 링크 아이콘 */
+.introduce_img {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+
+/* 네비게이션 바 상위 레이아웃 */
+.navbar {
+  width: 100px;
+  background: rgb(250, 237, 213);
+  border: 2px solid black;
+  border-radius: 30px;
+  flex-direction: column;
+  display: block;
+  padding: 20px 0px;
+}
+
+/* 네비게이션 바 아이콘  */
+.navbar_icon {
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+}
+
+.teeee {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute; /* 절대 위치를 사용 */
+  margin-left: 20px;
+  padding: 5px 15px;
+  font-size: 20px;
+}
+
+/* .main{
+    background: red;
     border: 1px solid gray;
     width: 100%;
     padding : 10px;
     border : 1px solid gray;
     border-radius: 30px;
-    
-}
-
-.Propile{
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-}
-
-.sideMenu{ 
-    margin-left: 20px;
-}
-
-.weather_box { 
-    font-size: 20px;
-    /* border: 1px solid black; */
-    border-radius: 30%;
-}
-
-.another_city_search_text {
-    font-size: 10px;
-}
-
-.weather_box button {
-    margin-right: 3px;
-    border-radius: 30%;
-    border: 1px solid white;
-}
-
-.city_text{
-    font-weight: 700;
-}
-
-.test button {
-    border-radius: 10px;
-}
-
-.time_text{
-    font-size: 12px;
-}
-
+} 사용 여부 애매 */

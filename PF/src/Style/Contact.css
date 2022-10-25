@@ -1,0 +1,24 @@
+.contact_main {
+  background: white;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  text-align: center;
+
+  font-size: 30px;
+}
+
+.시발 {
+  width: 100px;
+}
+
+.아니 {
+  background: red;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}

@@ -1,38 +1,48 @@
 import React from "react";
-import '../Style/common.css'
-import '../Style/Contact.css'
-import { Link } from "react-router-dom";
-import Header_introduce from "../Component/Header_introduce";
+import "../Style/common.css";
+import "../Style/Contact.css";
+import Header_introduce from "../Component/Common/Header_introduce";
 import { motion } from "framer-motion";
+import SideMenu from "../Component/Common/SideMenu";
 
-const Contact = ( {Props} ) => {
-    
-    return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-        >
-            <div className="container">
-                <div className="content">
-                    <Header_introduce Props={Props}/>
-                    <div className="main">
-                        <h1>연락처</h1>
-                    </div>
-                </div>
-                <div className="sideMenu">
-                    <ul>
-                        <li><Link to='/'>Home</Link></li><br/>
-                        <li><Link to='/Introduce'>Introduce</Link></li><br/>
-                        <li><Link to='/Contact'>Contact</Link></li><br/>
-                        <li>4</li><br/>
-                        <li>5</li><br/>
-                    </ul>
-                </div>
-               
-            </div>
-        </motion.div>
-    )
-}
+const Contact = ({ Props }) => {
+  const qwer = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(test);
+    }
+  };
+
+  const test = (e) => {
+    const lat = e.coords.latiWtude;
+    const lng = e.coords.longitude;
+
+    console.log(`위도 = ${lat}, 경도= ${lng}`);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <div className="container">
+        <div className="content">
+          <Header_introduce Props={Props} />
+          <div className="contact_main">
+            <h1>비밀의 공간 ?</h1>
+            <button onClick={() => qwer()} className="시발">
+              위치
+            </button>
+            <div draggable={true} className="아니"></div>
+            <div draggable={false} className="아니"></div>
+          </div>
+        </div>
+        <div className="sideMenu">
+          <SideMenu />
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 export default Contact;
