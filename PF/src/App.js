@@ -46,7 +46,7 @@ function App() {
   }, [city]);
 
   return (
-    <div>
+    <div className="testBG">
       <RouteControl Props={Props} />
     </div>
   );

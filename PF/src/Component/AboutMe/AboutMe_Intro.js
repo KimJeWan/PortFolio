@@ -22,7 +22,7 @@ const AboutMe_Intro = () => {
       <div className="AboutMe_area">
         <h2>Greetings</h2>
         <p className="aaaa">
-          반갑습니다, 항상 발전하기위해 노력하는 개발자 김제완 입니다.
+          반갑습니다, 항상 발전하기위해 노력하는 김제완 입니다.
           <br />
           저는 프론트엔드 개발을 하고 있으며, 그 중에서도 리액트 기반 개발을
           주로 하고 있습니다.

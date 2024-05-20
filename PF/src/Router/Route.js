@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "../Page/Home";
-import Contact from "../Page/Contact";
+import Secret from "../Page/Secret";
 import AboutMe from "../Page/AboutMe";
 import Experience_dable from "../Page/Experience_dable";
 import { AnimatePresence } from "framer-motion";
+import Test from "../Page/Test";
 
 const RouteControl = ({ Props }) => {
   return (
@@ -13,8 +14,9 @@ const RouteControl = ({ Props }) => {
         <AnimatePresence>
           <Routes>
             <Route path="/" element={<Home Props={Props} />} />
-            <Route path="/Contact" element={<Contact Props={Props} />} />
+            <Route path="/Secret" element={<Secret Props={Props} />} />
             <Route path="/AboutMe" element={<AboutMe Props={Props} />} />
+            <Route path="/Test" element={<Test Props={Props} />} />
             <Route
               path="/education_dable"
               element={<Experience_dable Props={Props} />}

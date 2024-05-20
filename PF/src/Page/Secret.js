@@ -1,11 +1,11 @@
 import React from "react";
 import "../Style/common.css";
-import "../Style/Contact.css";
+import "../Style/Secret.css";
 import Header_introduce from "../Component/Common/Header_introduce";
 import { motion } from "framer-motion";
 import SideMenu from "../Component/Common/SideMenu";
 
-const Contact = ({ Props }) => {
+const Secret = ({ Props }) => {
   const qwer = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(test);
@@ -13,9 +13,8 @@ const Contact = ({ Props }) => {
   };
 
   const test = (e) => {
-    const lat = e.coords.latiWtude;
+    const lat = e.coords.latitude;
     const lng = e.coords.longitude;
-
     console.log(`위도 = ${lat}, 경도= ${lng}`);
   };
 
@@ -29,12 +28,12 @@ const Contact = ({ Props }) => {
         <div className="content">
           <Header_introduce Props={Props} />
           <div className="contact_main">
-            <h1>비밀의 공간 ?</h1>
-            <button onClick={() => qwer()} className="시발">
-              위치
-            </button>
-            <div draggable={true} className="아니"></div>
-            <div draggable={false} className="아니"></div>
+            <h1>비밀의 공간</h1>
+            <h2>이스터에그를 만들어 보자</h2>
+            {/* 누르면 현재 위치 좌표뜸 ( 위도 경도 ) */}
+            {/* <button onClick={() => qwer()} className="wwwwww none">
+              위치 
+            </button>  */}
           </div>
         </div>
         <div className="sideMenu">
@@ -45,4 +44,4 @@ const Contact = ({ Props }) => {
   );
 };
 
-export default Contact;
+export default Secret;

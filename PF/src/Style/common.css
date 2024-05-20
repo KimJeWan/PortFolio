@@ -69,7 +69,7 @@ a {
 /* 최상단 하위 레이아웃 */
 .content {
   border: 1px solid black;
-  background-color: rgb(127, 243, 247);
+  background-color: rgb(235, 236, 241);
   width: 90%;
   padding-left: 20px;
   border-radius: 30px;
@@ -78,11 +78,13 @@ a {
 
 /* 왼쪽 레이아웃 ( 헤더 - 간단소개, 날씨 ..) */
 .introduce {
-  margin-right: 30px;
+  margin: 30px;
   border-radius: 30px;
+  border: 1px solid black;
   width: 350px;
   padding: 30px 10px 10px 10px;
   text-align: center;
+  background: rgb(250, 234, 213);
   /* background: red; */
 }
 
@@ -155,6 +157,31 @@ a {
   margin-left: 20px;
   padding: 5px 15px;
   font-size: 20px;
+}
+
+.introduce_quotes {
+  font-weight: 700;
+}
+
+.test1234 {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: -8px;
+
+  animation: fall 10s linear;
+}
+
+@keyframes fall {
+  from {
+  }
+
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }
 
 /* .main{

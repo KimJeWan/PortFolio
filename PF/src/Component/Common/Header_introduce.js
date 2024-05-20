@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IoIosCloud, IoIosSunny, IoIosRainy } from "react-icons/io";
+import { Quotes } from "../../Config/Quotes";
 
 const Header_introduce = ({ Props }) => {
   const [cityKorean, setCityKorean] = useState("대구");
@@ -8,6 +9,7 @@ const Header_introduce = ({ Props }) => {
   const hours = String(now.getHours()).padStart(2, "0");
   const minutes = String(now.getMinutes()).padStart(2, "0");
   const Sconds = String(now.getSeconds()).padStart(2, "0");
+  const nowDay = now.getDate() - 1;
 
   const nowTime = `( ${hours} : ${minutes} : ${Sconds} )`;
   const changeCity = (city) => {
@@ -43,9 +45,21 @@ const Header_introduce = ({ Props }) => {
       );
   };
 
+  console.log(nowDay);
+
+  const secret = () => {
+    window.location.href = "http://localhost:3000/PortFolio/Secret";
+  };
+
   return (
     <div className="introduce">
-      <img src="./img/jewan2.jpg" className="Propile" a />
+      <img
+        src="./img/jewan2.jpg"
+        className="Propile"
+        onClick={() => {
+          secret();
+        }}
+      />
       <h1 className="introduce_text">김제완</h1>
       <h3 className="introduce_text">FrontEnd Developer</h3>
       <img
@@ -64,26 +78,43 @@ const Header_introduce = ({ Props }) => {
         src="./img/instar.png"
       ></img>
       <div>
-        <br />
-        {/* <div className="weather_box">
-                    {Props.cityWeather.weather === 'err' ? '날씨정보 받아오지 못함' : 
-                        <>
-                            현재 <span className="time_text">{nowTime}</span>
-                            <br/><span className="city_text">{cityKorean}</span> 날씨 <br/><br/>
-                            {weatherDivision()}<br/>
-                            기온 : {Props.cityWeather.temperature} ℃<br/>
-                            습도 : {Props.cityWeather.humidity} %<br/>
-                            초속 : {Props.cityWeather.wind} m/s<br/><br/>
-                            <span className="another_city_search_text">↓↓↓↓다른도시 검색하기↓↓↓↓</span><br/>
-                            <button onClick={()=>changeCity('seoul')}>서울</button>
-                            <button onClick={()=>changeCity('daejeon')}>대전</button>
-                            <button onClick={()=>changeCity('daegu')}>대구</button>
-                            <button onClick={()=>changeCity('busan')}>부산</button>
-                            <button onClick={()=>changeCity('jeju')}>제주</button><br/><br/>
-                        </>
-                    } 
-                </div> 뭔가 넣고보니 이상한 */}
+        <p className="introduce_quotes">"{Quotes[nowDay].quote}"</p>
+        <p className="introduce_quotes">-{Quotes[nowDay].author}-</p>
       </div>
+      {/* <div>
+        <br />
+        <div className="weather_box">
+          {Props.cityWeather.weather === "err" ? (
+            "날씨정보 받아오지 못함"
+          ) : (
+            <>
+              현재 <span className="time_text">{nowTime}</span>
+              <br />
+              <span className="city_text">{cityKorean}</span> 날씨 <br />
+              <br />
+              {weatherDivision()}
+              <br />
+              기온 : {Props.cityWeather.temperature} ℃<br />
+              습도 : {Props.cityWeather.humidity} %<br />
+              초속 : {Props.cityWeather.wind} m/s
+              <br />
+              <br />
+              <span className="another_city_search_text">
+                ↓↓↓↓다른도시 검색하기↓↓↓↓
+              </span>
+              <br />
+              <button onClick={() => changeCity("seoul")}>서울</button>
+              <button onClick={() => changeCity("daejeon")}>대전</button>
+              <button onClick={() => changeCity("daegu")}>대구</button>
+              <button onClick={() => changeCity("busan")}>부산</button>
+              <button onClick={() => changeCity("jeju")}>제주</button>
+              <br />
+              <br />
+            </>
+          )}
+        </div>{" "}
+        뭔가 넣고보니 이상한
+      </div> */}
     </div>
   );
 };

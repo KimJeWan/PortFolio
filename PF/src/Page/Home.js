@@ -5,6 +5,34 @@ import { motion } from "framer-motion";
 import SideMenu from "../Component/Common/SideMenu";
 
 const Home = ({ Props }) => {
+  // 550 ~ 1550 px
+  const makeSnowflake = () => {
+    let arr = [];
+    for (let i = 0; i < 500; i++) {
+      arr.push(
+        <div
+          className="test1234"
+          style={{
+            left: `${randomNum(550, 1550)}px`,
+            animationDelay: `${delay()}s`,
+          }}
+        ></div>
+      );
+    }
+    return arr;
+  };
+
+  const randomNum = (min, max) => {
+    const ranNum = Math.floor(Math.random() * (max - min + 1)) + min + 1;
+    return ranNum;
+  };
+
+  const delay = () => {
+    const delay = Math.random() * 10;
+    return delay;
+  };
+
+  console.log(delay);
   return (
     <div>
       <motion.div
@@ -16,8 +44,11 @@ const Home = ({ Props }) => {
           <div className="content">
             <Header_introduce Props={Props} />
             <div className="Home_main">
-              <h1 className="center">KimJeWan`s Portfolio</h1>
-              <h3 className="center">하루하루 발전하는 개발자 김제완입니다</h3>
+              {makeSnowflake()}
+              <h1 className="center ">KimJeWan`s Portfolio</h1>
+              <h3 className="center ">
+                김제완의 포트폴리오에 오신것을 환영합니다 !
+              </h3>
             </div>
           </div>
           <div className="sideMenu">
