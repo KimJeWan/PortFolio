@@ -112,13 +112,6 @@
   border-bottom: 1px solid black;
 }
 
-/* education 프로젝트 설명, 사용된 기술 */
-.education_footer {
-  /* background: green; */
-  height: 30%;
-  display: flex;
-}
-
 /* education 이미지 */
 .education_img {
   width: 100%;
@@ -174,6 +167,17 @@
 .education_footer_right {
   padding: 20px;
   width: 50%;
+}
+
+/* education 프로젝트 설명, 사용된 기술 */
+.education_footer {
+  /* background: green; */
+}
+
+.education_TTA {
+  padding-top: 50px;
+  text-align: center;
+  /* background: red; */
 }
 
 .aaaa {

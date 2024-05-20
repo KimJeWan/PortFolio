@@ -4,6 +4,7 @@ import Home from "../Page/Home";
 import Secret from "../Page/Secret";
 import AboutMe from "../Page/AboutMe";
 import Experience_dable from "../Page/Experience_dable";
+import Experience_TTA from "../Page/Experience_TTA";
 import { AnimatePresence } from "framer-motion";
 import Test from "../Page/Test";
 
@@ -20,6 +21,10 @@ const RouteControl = ({ Props }) => {
             <Route
               path="/education_dable"
               element={<Experience_dable Props={Props} />}
+            />
+            <Route
+              path="/education_TTA"
+              element={<Experience_TTA Props={Props} />}
             />
           </Routes>
         </AnimatePresence>

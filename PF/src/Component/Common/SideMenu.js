@@ -41,7 +41,7 @@ const SideMenu = () => {
           Toy Project
         </span>
       </div>
-      <div className="navbar_icon">
+      {/* <div className="navbar_icon">
         <Link to="/Test">
           <IoIosBuild
             className="pointer"
@@ -50,7 +50,7 @@ const SideMenu = () => {
           />
         </Link>
         <span className={testHover === true ? "teeee" : "none"}>Test</span>
-      </div>
+      </div> */}
     </div>
   );
 };

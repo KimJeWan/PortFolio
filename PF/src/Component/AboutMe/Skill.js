@@ -16,12 +16,12 @@ const Skill = () => {
         <ProgressBar completed={60} />
         <h4>REACT</h4>
         <ProgressBar completed={45} />
-        <h4>C/C++</h4>
+        {/* <h4>C/C++</h4>
         <ProgressBar completed={25} />
         <h4>JAVA</h4>
         <ProgressBar completed={25} />
         <h4>PYTHON</h4>
-        <ProgressBar completed={20} />
+        <ProgressBar completed={20} /> */}
       </div>
     </>
   );

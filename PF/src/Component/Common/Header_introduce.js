@@ -61,7 +61,7 @@ const Header_introduce = ({ Props }) => {
         }}
       />
       <h1 className="introduce_text">김제완</h1>
-      <h3 className="introduce_text">FrontEnd Developer</h3>
+      <h3 className="introduce_text">FrontEnd Developer{<br />}QA Tester</h3>
       <img
         onClick={() => window.open("https://github.com/KimJeWan")}
         className="introduce_img pointer"
