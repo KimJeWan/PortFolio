@@ -30,7 +30,7 @@ const Education = () => {
           <br />
           <li>
             <Link to="/education_TTA">
-              >> 2022.12 ~ 2024.06 한국정보통신기술협회(TTA)
+              >> 2022.12 ~ 2024.012 한국정보통신기술협회(TTA)
             </Link>
           </li>
           <br />
