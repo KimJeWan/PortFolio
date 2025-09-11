@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PortFolio/static/css/main.54072e24.css",
-    "main.js": "/PortFolio/static/js/main.a178aaa9.js",
+    "main.js": "/PortFolio/static/js/main.6f9b376c.js",
     "static/media/NanumBarunGothicLight.ttf": "/PortFolio/static/media/NanumBarunGothicLight.644909786861639c2cf6.ttf",
     "static/media/NanumBarunGothicUltraLight.ttf": "/PortFolio/static/media/NanumBarunGothicUltraLight.48f4f8e417bc6c695e72.ttf",
     "static/media/NanumBarunGothicBold.ttf": "/PortFolio/static/media/NanumBarunGothicBold.d2409cf29861098bad74.ttf",
@@ -11,10 +11,10 @@
     "static/media/NanumBarunGothic.otf": "/PortFolio/static/media/NanumBarunGothic.e511eb615f740b16240d.otf",
     "index.html": "/PortFolio/index.html",
     "main.54072e24.css.map": "/PortFolio/static/css/main.54072e24.css.map",
-    "main.a178aaa9.js.map": "/PortFolio/static/js/main.a178aaa9.js.map"
+    "main.6f9b376c.js.map": "/PortFolio/static/js/main.6f9b376c.js.map"
   },
   "entrypoints": [
     "static/css/main.54072e24.css",
-    "static/js/main.a178aaa9.js"
+    "static/js/main.6f9b376c.js"
   ]
 }
